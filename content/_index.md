@@ -1,24 +1,9 @@
 +++
+extra.hide_table_of_contents = true
 +++
 
-# A match made in heaven
+Hi, I'm **Ramkumar** ([@ramenhost](https://github.com/ramenhost)).
 
-There is a website obesity crisis. Bloated websites full of scripts, ads, and trackers are slowing your readers down every time they try to read your well-crafted content.
+I work on systems programming, software performance and security. I love self-hosting software, solving [capture the flag](https://ctftime.org/user/183781) challenges and discovering strange tools.
 
-Zola Bear Blog is all you need to build a fantastic and optimized site or blog. It works perfectly on **any** viewing device. All you need to focus on is writing good content.
-
-[Go to the original bear blog](https://bearblog.dev/).
-
----
-
-What happens when you combine the worlds' fastest, most lightweight static site generator with a design theme built to provide you with free, no-nonsense, super-fast blogging capabilities?
-
-**Use this theme, and find out!**
-
-Made with 💚 by [Alan Pearce](https://alanpearce.eu).
-
----
-
-Simply publish content online, grow an audience, and keep your pages tiny, fast, and **optimized for search engines**.
-
-Each page is ~5kb, and you can **host your blog yourself**.
+You’ll find technical insights, capture the flag write-ups and notes on things that catch my eye here.

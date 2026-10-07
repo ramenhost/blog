@@ -8,7 +8,7 @@ compile_sass = false
 build_search_index = false
 
 # The site title and description; used in feeds by default.
-title = "ramenhost's blog"
+title = "Ramkumar's blog"
 description = "Breaking code and ciphers"
 
 # The site theme to use.
@@ -26,7 +26,6 @@ feed_filenames = ["atom.xml", "rss.xml"]
 author = "Ramkumar"
 
 taxonomies = [
-    {name = "categories"},
     {name = "tags"},
 ]
 
@@ -80,10 +79,26 @@ error_on_missing_language = true
 theme = "catppuccin-mocha"
 
 [extra]
-date_format = "%d-%m-%Y"
+date_format = "%d-%b-%Y"
 webserver_sends_csp_headers = true
 
 # Table of contents by zola-bearblog theme
 [extra.table_of_contents]
 show = true
 max_level = 2
+
+[[extra.main_menu]]
+name = "Home"
+url = "@/_index.md"
+
+[[extra.main_menu]]
+name = "Blog"
+url = "@/blog/_index.md"
+
+[[extra.main_menu]]
+name = "Github"
+url = "https://github.com/ramenhost"
+
+[[extra.main_menu]]
+name = "Feed"
+url = "/atom.xml"

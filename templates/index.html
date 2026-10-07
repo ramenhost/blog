@@ -1,0 +1,30 @@
+{% extends "base.html" %} {%- block main -%}
+<main>
+  <br />
+  {{ section.content | safe }}
+  <hr style="margin: 30px 0px" />
+  <h3>Recent</h3>
+  <ul class="blog-posts">
+    {%- set blog_section = get_section(path="blog/_index.md") -%} {%- for page
+    in blog_section.pages %} {%- if loop.index <= 5 %}
+    <li>
+      <span>
+        <i>
+          <time datetime="{{ page.date | date(format='%Y-%m-%d') }}" pubdate>
+            {{ page.date | date(format=config.extra?.date_format or "%Y-%m-%d")
+            }}
+          </time>
+        </i>
+      </span>
+      <a href="{{ page.permalink }}">{{ page.title }}</a>
+    </li>
+    {%- endif %} {%- else %}
+    <li>{{ trans(key="no_posts", lang=lang) }}</li>
+    {%- endfor -%}
+  </ul>
+
+  <p>
+    <a href="{{ blog_section.permalink }}">all posts &rarr;</a>
+  </p>
+</main>
+{%- endblock main -%}
