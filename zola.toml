@@ -7,9 +7,61 @@ compile_sass = false
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
+# The site title and description; used in feeds by default.
+title = "ramenhost's blog"
+description = "Breaking code and ciphers"
+
+# When set to "true", a feed is automatically generated.
+generate_feeds = true
+
+# The filenames to use for the feeds. Used as the template filenames, too.
+# Defaults to ["atom.xml"], which has a built-in template that renders an Atom 1.0 feed.
+# There is also a built-in template "rss.xml" that renders an RSS 2.0 feed.
+feed_filenames = ["atom.xml", "rss.xml"]
+
+# The default author for pages
+author = "Ramkumar"
+
+taxonomies = [
+    {name = "categories"},
+    {name = "tags"},
+]
+
 [markdown]
 
+# Whether external links are to be opened in a new tab
+# If this is true, a `rel="noopener"` will always automatically be added for security reasons
+external_links_target_blank = true
+
+# Whether to set rel="nofollow" for all external links
+external_links_no_follow = true
+
+# Whether to set rel="noreferrer" for all external links
+external_links_no_referrer = true
+
+# Whether to set rel="external" for all external links
+external_links_external = true
+
+# When set to "true", support for GitHub-style alerts, a.k.a. callouts or admonitions, is enabled in the Markdown parser.
+# For example, this Markdown syntax:
+#
+#     > [!NOTE]
+#     > alert note
+#
+# will result in the following generated HTML:
+#
+#     <blockquote class="markdown-alert-note">
+#     <p>alert note</p>
+#     </blockquote>
+#
+# where the CSS class name suffix may be `note`, `tip`, `important`, `warning`, or `caution`, depending on the alert type.
+# Visual appearance depends on theme-level support; refer to your theme's documentation for more information.
+github_alerts = false
+
 [markdown.highlighting]
+# When set to "true", missing highlight languages are treated as errors. Defaults to false but recommended to set to true.
+error_on_missing_language = true
+
 theme = "catppuccin-mocha"
 
 [extra]
