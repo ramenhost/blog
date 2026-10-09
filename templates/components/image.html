@@ -1,0 +1,25 @@
+{% component image(path, alt="", @page) %}
+{% if path is starting_with(pat="/") or path is starting_with(pat="@/") or path is starting_with(pat="http") %}
+  {% set full_path = path %}
+{% else %}
+  {% set parts = page.relative_path | split(pat="/") %}
+  {% set full_path = "" %}
+  {% for p in parts %}
+    {% if not loop.last %}
+      {% set_global full_path = full_path ~ p ~ "/" %}
+    {% endif %}
+  {% endfor %}
+  {% set full_path = full_path ~ path %}
+{% endif %}
+
+{% set meta = get_image_metadata(path=full_path) %}
+{% set avif = resize_image(path=full_path, width=meta.width, height=meta.height, op="fit", format="avif", speed=1) %}
+{% set webp = resize_image(path=full_path, width=meta.width, height=meta.height, op="fit", format="webp") %}
+{% set fallback = resize_image(path=full_path, width=meta.width, height=meta.height, op="fit") %}
+
+<picture>
+    <source srcset="{{ avif.url }}" type="image/avif">
+    <source srcset="{{ webp.url }}" type="image/webp">
+    <img src="{{ fallback.url }}" alt="{{ alt }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy">
+</picture>
+{% endcomponent %}

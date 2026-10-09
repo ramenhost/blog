@@ -1,0 +1,92 @@
+<style>
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Base styles for all alert blockquotes */
+  blockquote[class^="markdown-alert-"],
+  blockquote[class*=" markdown-alert-"] {
+    border-left: 4px solid;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 0 6px 6px 0;
+    background-color: transparent; /* Fallback */
+  }
+
+  /* Ensure inside text doesn't inherit blockquote margins */
+  blockquote[class^="markdown-alert-"] > :first-child,
+  blockquote[class*=" markdown-alert-"] > :first-child {
+    margin-top: 0;
+  }
+  blockquote[class^="markdown-alert-"] > :last-child,
+  blockquote[class*=" markdown-alert-"] > :last-child {
+    margin-bottom: 0;
+  }
+
+  /* 1. Note Alert */
+  blockquote.markdown-alert-note {
+    border-left-color: #0969da;
+    background-color: #f0f6fc;
+    color: #1f2328;
+  }
+
+  /* 2. Tip Alert */
+  blockquote.markdown-alert-tip {
+    border-left-color: #1a7f37;
+    background-color: #f0fdf4;
+    color: #1f2328;
+  }
+
+  /* 3. Important Alert */
+  blockquote.markdown-alert-important {
+    border-left-color: #8250df;
+    background-color: #fbefff;
+    color: #1f2328;
+  }
+
+  /* 4. Warning Alert */
+  blockquote.markdown-alert-warning {
+    border-left-color: #9a6700;
+    background-color: #fff8e6;
+    color: #1f2328;
+  }
+
+  /* 5. Caution Alert */
+  blockquote.markdown-alert-caution {
+    border-left-color: #d1242f;
+    background-color: #fff5f5;
+    color: #1f2328;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    blockquote.markdown-alert-note {
+      border-left-color: #2f81f7;
+      background-color: #0d1117;
+      color: #e6edf3;
+    }
+    blockquote.markdown-alert-tip {
+      border-left-color: #3fb950;
+      background-color: #0d1117;
+      color: #e6edf3;
+    }
+    blockquote.markdown-alert-important {
+      border-left-color: #a371f7;
+      background-color: #0d1117;
+      color: #e6edf3;
+    }
+    blockquote.markdown-alert-warning {
+      border-left-color: #d29922;
+      background-color: #0d1117;
+      color: #e6edf3;
+    }
+    blockquote.markdown-alert-caution {
+      border-left-color: #f85149;
+      background-color: #0d1117;
+      color: #e6edf3;
+    }
+  }
+</style>

@@ -31,6 +31,8 @@ taxonomies = [
 
 default_language = "en"
 
+ignored_content = ["*.{gif,jpg,jpeg,png}"]
+
 # keys used by zola-bearblog theme
 [translations]
 no_posts = "No posts yet"
@@ -70,13 +72,14 @@ external_links_external = true
 #
 # where the CSS class name suffix may be `note`, `tip`, `important`, `warning`, or `caution`, depending on the alert type.
 # Visual appearance depends on theme-level support; refer to your theme's documentation for more information.
-github_alerts = false
+github_alerts = true
 
 [markdown.highlighting]
 # When set to "true", missing highlight languages are treated as errors. Defaults to false but recommended to set to true.
 error_on_missing_language = true
 
-theme = "catppuccin-mocha"
+light_theme = "github-light"
+dark_theme = "github-dark"
 
 [extra]
 date_format = "%d-%b-%Y"
@@ -85,7 +88,7 @@ webserver_sends_csp_headers = true
 # Table of contents by zola-bearblog theme
 [extra.table_of_contents]
 show = true
-max_level = 2
+max_level = 3
 
 [[extra.main_menu]]
 name = "Home"
