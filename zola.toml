@@ -83,7 +83,7 @@ dark_theme = "github-dark"
 
 [extra]
 date_format = "%d-%b-%Y"
-webserver_sends_csp_headers = true
+webserver_sends_csp_headers = false
 
 # Table of contents by zola-bearblog theme
 [extra.table_of_contents]
