@@ -1,0 +1,13 @@
+name = "blog"
+compatibility_date = "2026-10-9"
+
+routes = [
+  { pattern = "ramenhost.dev", custom_domain = true },
+  { pattern = "www.ramenhost.dev", custom_domain = true }
+]
+
+[build]
+command = "bash ./build.sh"
+
+[assets]
+directory = "./public"
