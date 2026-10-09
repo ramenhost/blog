@@ -26,4 +26,4 @@ fi
 
 [[ "$(zola --version)" == "zola ${ZOLA_VERSION}" ]]
 git submodule update --init --recursive
-zola build --minify
+zola build
