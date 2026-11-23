@@ -26,4 +26,9 @@ fi
 
 [[ "$(zola --version)" == "zola ${ZOLA_VERSION}" ]]
 git submodule update --init --recursive
-zola build
+
+if [ "$WORKERS_CI_BRANCH" = "main" ] || [ -z "$WORKERS_CI_BRANCH" ]; then
+  zola build
+else
+  zola build --base-url "/"
+fi
